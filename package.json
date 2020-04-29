@@ -1,0 +1,17 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "description": "task ",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "heroku-postbuild": "cd client && npm install && npm run build"
+    },
+    "author": "Yathaarth Jamwal",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "cheerio": "^1.0.0-rc.3",
+        "express": "^4.17.1"
+    }
+}
