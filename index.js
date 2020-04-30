@@ -4,6 +4,8 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const cors = require('cors');
 
+const app = express();
+
 const scraper = () => {
     //let quotesData = null;
     let quotes = [];
@@ -39,15 +41,13 @@ const scraper = () => {
 
 };
 
-const app = express();
-
 let quotesData = [];
 quotesData = scraper();
-//console.log(scraper());
+
 console.log(quotesData);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '/client/build')));
 
 // Put all API endpoints under '/api'
 app.get('/api/quotes', cors(), async(req, res, next) => {
