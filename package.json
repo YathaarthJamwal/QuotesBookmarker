@@ -10,8 +10,7 @@
         "start:prod": "node index.js",
         "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
         "client": "cd client && npm run start",
-        "installl": "cd client && npm install",
-        "build": "cd client && npm run build"
+        "heroku-postbuild": "cd client && npm install && npm run build"
     },
     "author": "Yathaarth Jamwal",
     "license": "ISC",
