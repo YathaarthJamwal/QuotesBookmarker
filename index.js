@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 
 const scraper = () => {
-    //let quotesData = null;
+
     let quotes = [];
 
     axios.get('https://www.brainyquote.com/topics/scrape-quotes')
@@ -23,16 +23,6 @@ const scraper = () => {
                         author: $(this).find('.bq-aut').text().trim()
                     }
                 });
-                //console.log(quotes);
-
-                // quotesData = quotes.filter(n => n != undefined)
-                // fs.writeFile('quotes.json', 
-                //               JSON.stringify(quotes, null, 4), 
-                //               (err)=> console.log('File successfully written!'))
-
-                //quotesData = JSON.stringify(quotes, null, 4);
-                //console.log(quotesData);
-
             }
         })
         .catch(error => console.log(error));
@@ -61,26 +51,7 @@ app.get('/api/quotes', cors(), async(req, res, next) => {
     }
 });
 
-// app.get('/api/cow/', cors(), async(req, res, next) => {
-//     try {
-//         const moo = cowsay.say({ text: 'Hello World!' })
-//         res.json({ moo })
-//     } catch (err) {
-//         next(err)
-//     }
-// })
 
-// if (process.env.NODE_ENV === 'production') {
-//     // Serve any static files
-//     app.use(express.static(path.join(__dirname, 'client/build')));
-//     // Handle React routing, return all requests to React app
-//     app.get('*', function(req, res) {
-//         res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-//     });
-// }
-
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
 app.get('*', (req, res) => {
     // res.sendFile(path.join(__dirname + '/client/build/index.html'));
     console.log("Error Logged");
