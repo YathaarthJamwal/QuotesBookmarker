@@ -1,0 +1,12 @@
+.BookmarkBox {
+    width: 70%;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 2px 1px #ccc;
+    margin: 10px auto;
+    padding: 10px;
+    border: 6px inset blue;
+    box-shadow: turquoise;
+}

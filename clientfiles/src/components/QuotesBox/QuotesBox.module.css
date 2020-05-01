@@ -1,0 +1,31 @@
+.QuotesBox {
+    width: 70%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 2px 1px red;
+    margin: 50px auto;
+    padding: 10px;
+    border: 6px inset red;
+    box-shadow: salmon;
+    border-radius: 10px;
+}
+
+.Buttons {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+}
+
+.Buttons button {
+    background-color: gray;
+}
+
+.MainBox {
+    display: flexbox;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}

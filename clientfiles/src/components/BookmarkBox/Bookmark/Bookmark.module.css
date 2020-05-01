@@ -1,0 +1,11 @@
+.Bookmark {
+    flex-flow: column;
+    align-items: center;
+    border: 2px solid lightgray;
+    padding: 1px;
+    margin: auto 1px;
+}
+
+.Bookmark button {
+    background-color: lightgray;
+}
