@@ -10,6 +10,6 @@ The scraped quotes are sent as a JSON. To see the response sent: visit: https://
 The app can be viewed on : https://quotesbookmarker.web.app/.
 Takes a while to load - about 15-20 seconds. Wanted to keep it as simple as possible.
 
-Backend deployed on Heroku. Front-end on Firebase.
+[Backend](index.js) deployed on Heroku. [Front-end](clientfiles) on Firebase.
 
 Reach out in case of any issues (I don't think there will be :) )
